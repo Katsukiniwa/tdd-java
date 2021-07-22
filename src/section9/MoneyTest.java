@@ -9,8 +9,8 @@ public class MoneyTest {
 	@Test
 	public void testMultiplication() {
 		Money five = Money.dollar(5);
-		assertEquals(new Dollar(10), five.times(2));
-		assertEquals(new Dollar(15), five.times(3));
+		assertEquals(new Dollar(10, "USD"), five.times(2));
+		assertEquals(new Dollar(15, "USD"), five.times(3));
 	}
 
 	@Test
@@ -24,7 +24,7 @@ public class MoneyTest {
 
 	@Test
 	public void testFrancMultiplication() {
-		Franc five = new Franc(5);
+		Franc five = new Franc(5, "CHF");
 		assertEquals(Money.franc(10), five.times(2));
 		assertEquals(Money.franc(15), five.times(3));
 	}
