@@ -2,14 +2,18 @@ package section15;
 
 public class Sum implements Expression {
 	// 被加算数
-	Money augend;
+	Expression augend;
 
 	// 加算
-	Money addend;
+	Expression addend;
 
-	Sum(Money augend, Money addend) {
+	Sum(Expression augend, Expression addend) {
 		this.augend = augend;
 		this.addend = addend;
+	}
+
+	public Expression plus(Expression addend) {
+		return null;
 	}
 
 	public Money reduce(Bank bank, String to) {
